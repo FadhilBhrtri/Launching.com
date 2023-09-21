@@ -22,10 +22,21 @@ h1 {
     font-size: 24px;
 }
 
-/* Mengatur gambar untuk responsif dan sesuai dengan ukuran InstaStory */
+/* Mengatur gambar untuk responsif */
 img {
     max-width: 100%;
-    max-height: 100%;
-    width: 1080px; /* Lebar InstaStory */
-    height: 1920px; /* Tinggi InstaStory */
+    height: auto;
+    max-height: 100vh; /* Membatasi tinggi gambar agar tidak terlalu besar di perangkat dengan layar tinggi */
+    width: auto; /* Membuat gambar mengikuti lebar maksimum */
+}
+
+/* Media query untuk perangkat mobile */
+@media (max-width: 768px) {
+    .slide {
+        padding: 20px; /* Menambahkan ruang padding untuk perangkat dengan lebar kurang dari 768px */
+    }
+
+    h1 {
+        font-size: 18px; /* Mengurangi ukuran font untuk perangkat mobile */
+    }
 }
